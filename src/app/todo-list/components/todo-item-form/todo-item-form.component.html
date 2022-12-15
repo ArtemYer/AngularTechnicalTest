@@ -1,0 +1,32 @@
+<div class="container">
+    <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+        <div class="form-control">
+            <span>Label</span>
+            <input type="text" placeholder="Label" formControlName="label">
+            <span 
+                class='error-text' 
+                *ngIf="form.get('label').errors['required'] && form.get('label').touched"
+            > Label is required
+            </span>
+        </div>
+        <div class="form-control">
+            <span>Description</span>
+            <input type="text" placeholder="Description" formControlName="description">
+            <span 
+                class='error-text' 
+                *ngIf="form.get('description').errors['required'] && form.get('description').touched"
+            > Description is required
+            </span>
+        </div>
+        <div class="form-control">
+            <span>Category</span>
+            <input type="text" placeholder="Category" formControlName="category">
+            <span 
+                class='error-text' 
+                *ngIf="form.get('category').errors['required'] && form.get('category').touched"
+            > Category is required
+            </span>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>

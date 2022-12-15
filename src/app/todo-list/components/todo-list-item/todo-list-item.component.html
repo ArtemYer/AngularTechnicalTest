@@ -1,0 +1,18 @@
+<div class="list-item-container">
+    <div class="item-fields">
+        <div class="field">
+            <span class="item-label">{{item?.label}}</span> <span class="done" *ngIf="item?.done">DONE</span>
+        </div>
+        <div class="field">
+            <span class="item-description">{{item?.description}}</span>
+        </div>
+        <div class="field">
+            <span class="item-description">{{item?.category}}</span>
+        </div>
+    </div>
+    <div class="item-buttons">
+        <button class="btn" (click)="editTask()">Edit</button>
+        <button class="btn" (click)="markAsDone()"> {{item?.done ? 'In Progress' : 'Done'}} </button>
+        <button class="btn btn-delete" (click)="deleteTask()">Delete</button>
+    </div>
+</div>

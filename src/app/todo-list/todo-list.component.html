@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="todo-list-container">
+    <input 
+        type="text" 
+        [(ngModel)]="search"
+        placeholder="Search..."
+    > 
+        <app-todo-list-item 
+            *ngFor="let todo of todoList | filter: search; trackBy: trackByFunction"
+            [item]="todo"
+            (onDelete)="deleteTask($event)"
+            (onUpdate)="showEditForm($event)"
+            (onMark)="updateTask($event)"
+        >
+        </app-todo-list-item>
+    </div>    
+    <button class="show-form-button" (click)="changeShowAddForm()">{{showForm ? 'Hide Form' : 'Add new task'}}</button>
+    <app-todo-item-form 
+        *ngIf="showForm"
+        (onAdd)="updateTask($event)"
+        [item]="currentTask"
+    ></app-todo-item-form>
+</div>

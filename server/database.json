@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "label": "Kitchen Cleanup",
+      "description": "Clean my dirty kitchen",
+      "category": "house",
+      "done": false
+    },
+    {
+      "id": 2,
+      "label": "Taxesss",
+      "description": "Start doing my taxes and contact my accountant jhon for advice",
+      "category": "bureaucracy1",
+      "done": "2022-12-15T17:30:59.402Z"
+    },
+    {
+      "label": "New Task",
+      "description": "Description for a new task",
+      "category": "Category of a new task",
+      "done": "2022-12-15T14:49:48.151Z",
+      "id": 3
+    }
+  ]
+}
